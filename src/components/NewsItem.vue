@@ -1,17 +1,21 @@
 <template>
-  <router-link :to="{path:`/detail/${item.id}`}" class="newsItem">
-    <div class="con">
-      <h4>{{item.title}}</h4>
-      <span>{{item.hint}}</span>
+  <div>
+    <div v-for="item in news.stories" :key="item">
+      <router-link :to="{path:`/detail/${item.id}`}" class="newsItem">
+        <div class="con">
+          <h4>{{item.title}}</h4>
+          <span>{{item.hint}}</span>
+        </div>
+        <div class="pic">
+          <img :src="item.images[0]" alt />
+        </div>
+      </router-link>
     </div>
-    <div class="pic">
-      <img :src="item.images[0]" alt />
-    </div>
-  </router-link>
+  </div>
 </template>
 <script>
 export default {
-  props: ["item"]
+  props: ["news"],
 };
 </script>
 <style lang="less">

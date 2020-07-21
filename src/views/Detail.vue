@@ -1,18 +1,46 @@
 <template>
   <div class="detailBox">
     <div class="headBox">
-      <img src="https://pic1.zhimg.com/v2-e3c42ca02015342159f0f787a918bb5c_fhd.jpg" alt />
+      <span class="back" @click="$router.push('/')">返回</span>
+      <img :src="image" alt />
       <div class="info">
-        <h3>《精灵宝可梦》中的水系口袋妖怪分淡水和咸水吗？</h3>
-        <span>疯癫的A兵者 / 知乎</span>
+        <h3>{{title}}</h3>
+        <span>{{ section }}</span>
       </div>
     </div>
-    <div class="content"></div>
+    <div class="content" v-html="body"></div>
   </div>
 </template>
 <script>
-import "../assets/content.css";
-export default {};
+import { watch, toRefs,ref,reactive } from "vue";
+import API from "../api";
+export default {
+  setup() {
+    let id = ref(0);
+    let state = reactive({
+      image: '',
+      body: '',
+      title: '',
+      section: ''
+    });
+    watch(id, async () => {
+      let { image, body, title,section } = await API.zhihu.API_DETAIL(id.value)
+      state.image = image
+      state.body = body
+      state.title = title,
+      state.section = section? section.name : '佚名'
+    });
+    return {
+      id,
+      ...toRefs(state)
+    }
+  },
+  beforeMount(){
+    let { id } = this.$route.params
+    this.id = id
+    
+  }
+};
 </script>
 <style lang="less" scoped>
 .detailBox {
@@ -20,7 +48,12 @@ export default {};
     position: relative;
     height: 7.5rem;
     overflow: hidden;
-
+    .back{
+      position: absolute;
+      left: .3rem;
+      top: .3rem;
+      color: #fff;
+    }
     img {
       display: block;
       width: 100%;

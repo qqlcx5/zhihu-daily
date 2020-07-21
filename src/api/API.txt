@@ -1,0 +1,71 @@
+1. 获取今日新闻信息
+http://news-at.zhihu.com/api/4/news/latest
+{
+	//今天日期
+	date:'20191204,
+	//今日新闻
+	stories:[{
+		"image_hue": "0x484825",
+		"title": "如何评价 12 月 4 号国行 Switch 发布会？",
+		"url": "https:\/\/daily.zhihu.com\/story\/9717893",
+		"hint": "WouldYouKindly · 7 分钟阅读",
+		"ga_prefix": "120416",
+		"images": ["https:\/\/pic2.zhimg.com\/v2-8d47848eb5ea9d747b12eead9dbf4741.jpg"],
+		"type": 0,
+		"id": 9717893
+	},...],
+	//轮播图内容
+	top_stories:[{
+		"image_hue": "0x879943",
+		"hint": "作者 \/ 苏澄宇",
+		"url": "https:\/\/daily.zhihu.com\/story\/9717531",
+		"image": "https:\/\/pic2.zhimg.com\/v2-5c87a645d36d140fa87df6e8ca7cb989.jpg",
+		"title": "斑马的条纹到底是干嘛用的？",
+		"ga_prefix": "120407",
+		"type": 0,
+		"id": 9717531
+	},...]
+}
+
+2.详细内容信息
+http://news-at.zhihu.com/api/4/news/9717858
+{
+	"body": "",
+	"image_hue": "0x879943",
+	"image_source": "12019 \/ CC0",
+	"title": "斑马的条纹到底是干嘛用的？",
+	"url": "https:\/\/daily.zhihu.com\/story\/9717531",
+	"image": "https:\/\/pic2.zhimg.com\/v2-5c87a645d36d140fa87df6e8ca7cb989.jpg",
+	"share_url": "http:\/\/daily.zhihu.com\/story\/9717531",
+	"js": [],
+	"ga_prefix": "120407",
+	"images": ["https:\/\/pic4.zhimg.com\/v2-e5c464d7196a5fa254724cc91c15ca4b.jpg"],
+	"type": 0,
+	"id": 9717531,
+	"css": ["http:\/\/news-at.zhihu.com\/css\/news_qa.auto.css?v=4b3e3"]
+}
+
+3.过往消息
+http://news.at.zhihu.com/api/4/news/before/20191203
+{
+	"date": "20191201",
+	"stories": [{
+		"image_hue": "0xb39f7d",
+		"title": "小事 · 芳姐",
+		"url": "https:\/\/daily.zhihu.com\/story\/9717813",
+		"hint": "VOL.1146",
+		"ga_prefix": "120122",
+		"images": ["https:\/\/pic1.zhimg.com\/v2-26cbb28e78f2fd51d786d9ef542f9358.jpg"],
+		"type": 0,
+		"id": 9717813
+	},...]
+}
+
+4.查看评论数
+http://news-at.zhihu.com/api/4/story-extra/9717858
+{
+	"long_comments": 1,  长评论总数
+	"popularity": 183,  点赞总数
+	"short_comments": 22,  短评论总数
+	"comments": 23 评论总数
+}

@@ -2,8 +2,8 @@
   <header class="headerBox">
     <div class="title">
       <div class="time">
-        <span>2日</span>
-        <span>1月</span>
+        <span>{{day}}日</span>
+        <span>{{month}}月</span>
       </div>
       <h1>知乎日报</h1>
     </div>
@@ -14,6 +14,16 @@
 </template>
 <script>
 export default {
+  props:{
+    day: {
+      type: String,
+      default: '-'
+    },
+    month: {
+      type: String,
+      default: '-'
+    }
+  }
 };
 </script>
 <style lang="less">
