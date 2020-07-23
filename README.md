@@ -2,6 +2,12 @@
 
 ![vue](https://cdn.jsdelivr.net/gh/qqlcx5/figure-bed@1.0/img/20200723154936.jpg)
 
+## 项目界面
+
+一个简单的小项目，基于`Vue3.0` + `axios` + `swiper`实现。让大家对Vue3.0 API有一些新的认识。
+
+![zhihu](https://cdn.jsdelivr.net/gh/qqlcx5/figure-bed@1.0/img/20200723161029.jpg)
+
 ## 前言
 
 Vue3.0个人觉得学习挺容易的，Vue2.0水平怎么样，Vue3.0也就差不多那样，所以Vue2.0学的不太好的同学还是回去补一补，现阶段急于学习Vue3.0反而容易造成知识混淆。很多写法和Vue2.0相似，学习成本不高，但是很多底层东西进行的重构，所以目前不建议直接使用在公司项目上。
