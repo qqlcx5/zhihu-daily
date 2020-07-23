@@ -1,14 +1,14 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>从零实现知乎日报</title><link href=css/app.756af6df.css rel=preload as=style><link href=css/chunk-vendors.950d5be8.css rel=preload as=style><link href=js/app.50b32830.js rel=preload as=script><link href=js/chunk-vendors.0166e06b.js rel=preload as=script><link href=css/chunk-vendors.950d5be8.css rel=stylesheet><link href=css/app.756af6df.css rel=stylesheet></head><body><script>~ function () {
-      let evt = 'onorientationchange' in window ? 'orientationchange' : 'resize';
-
-      function computed() {
-        let HTML = document.documentElement,
-          deviceW = HTML.clientWidth,
-          designW = 750,
-          ratio = deviceW / designW * 100;
-        if (deviceW >= designW) ratio = 100;
-        HTML.style.fontSize = ratio + 'px';
-      }
-      computed();
-      window.addEventListener(evt, computed);
-    }();</script><div id=app></div><script src=js/chunk-vendors.0166e06b.js></script><script src=js/app.50b32830.js></script></body></html>
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=favicon.ico><title>zhihu</title><link href=css/about.159cde84.css rel=prefetch><link href=js/about.919d0687.js rel=prefetch><link href=css/app.c85d39e7.css rel=preload as=style><link href=js/app.d98e3968.js rel=preload as=script><link href=js/chunk-vendors.3e8f4e2f.js rel=preload as=script><link href=css/app.c85d39e7.css rel=stylesheet></head><body><noscript><strong>We're sorry but zhihu doesn't work properly without JavaScript enabled. Please enable it tocontinue.</strong></noscript><script>~(function() {
+        // 监听屏幕旋转事件
+        let evt = 'onorientationchange' in window ? 'orientationchange' : 'resize';
+        function computed() {
+          let HTML = document.documentElement,
+            deviceW = HTML.clientWidth,
+            designW = 750,
+            ratio = (deviceW / designW) * 100;
+          if (deviceW >= designW) ratio = 100;
+          HTML.style.fontSize = ratio + 'px';
+        }
+        computed();
+        window.addEventListener(evt, computed);
+      })();</script><div id=app></div><script src=js/chunk-vendors.3e8f4e2f.js></script><script src=js/app.d98e3968.js></script></body></html>
